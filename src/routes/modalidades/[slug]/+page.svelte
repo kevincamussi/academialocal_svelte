@@ -8,9 +8,9 @@
 	export let data;
 </script>
 
-{#if data}
+{#key data}
 	<IntroSingle {data} />
-{/if}
+{/key}
 
 <div class="related">
 	<div class="related__wrapper wrap">

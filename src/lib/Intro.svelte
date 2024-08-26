@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
+
 	import imgMusculacao from '$lib/assets/musculacao.jpg';
 	import imgExercicio from '$lib/assets/exercicios.jpg';
 	import imgAlongamento from '$lib/assets/alongamento.jpg';
@@ -43,14 +45,14 @@
 
 <section class="intro" style="background-image: url({currentImage});">
 	<div class="intro__wrapper wrap">
-		<h1>
+		<h1 in:fly={{ y: -12, duration: 125, delay: 125 }}>
 			{@html title}
 			<img src={currentIcon} alt="Icon" />
 		</h1>
-		<p>{content}</p>
+		<p in:fly={{ y: -12, duration: 125, delay: 250 }}>{content}</p>
 
 		{#if href && btn}
-			<a {href} class="btn">{btn}</a>
+			<a {href} class="btn" in:fly={{ y: -12, duration: 125, delay: 375 }}>{btn}</a>
 		{/if}
 	</div>
 </section>
