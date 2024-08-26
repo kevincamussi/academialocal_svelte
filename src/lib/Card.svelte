@@ -1,12 +1,8 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-
 	export let info: Modalidade;
-
-	let archive = $page.route.id;
 </script>
 
-<a href="{archive}/{info.slug}" class="card">
+<a href="/modalidades/{info.slug}" class="card">
 	<img src={info.img} alt={info.name} />
 	<h2>{info.name}</h2>
 </a>
