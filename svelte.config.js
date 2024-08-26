@@ -33,7 +33,4 @@ const config = {
   }
 };
 
-// Log the BASE_PATH to verify it
-console.log(`Base Path: ${config.kit.paths.base}`);
-
 export default config;
