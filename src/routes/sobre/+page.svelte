@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Info from '$lib/Info.svelte';
 	import Intro from '$lib/Intro.svelte';
 </script>
@@ -8,7 +9,7 @@
 	icon="weight"
 	title="Conheça a academia que mais cresce na cidade!"
 	btn="Modalidades"
-	href="/modalidades"
+	href="{base}/modalidades"
 	content="Confira algumas das perguntas frequentes."
 />
 

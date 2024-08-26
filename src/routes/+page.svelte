@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Intro from '$lib/Intro.svelte';
 </script>
 
@@ -7,7 +8,7 @@
 	content="A academia Local está pronta para te ajudar a chegar mais longe e alcançar sua melhor
 			performance ."
 	btn="Sobre"
-	href="/sobre"
+	href="{base}/sobre"
 	img="musculacao"
 	icon="muscle"
 />

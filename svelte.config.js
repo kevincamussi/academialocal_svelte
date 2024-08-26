@@ -25,10 +25,10 @@ const config = {
   preprocess: vitePreprocess(),
   kit: {
     adapter: adapter({
-      fallback: '404.html'
+      fallback: 'index.html' // Usado para SPA (Single Page Application)
     }),
     paths: {
-      base: process.env.BASE_PATH || ''
+      base: process.env.BASE_PATH || '/academialocal_svelte'
     }
   }
 };
