@@ -1,5 +1,6 @@
 <script>
 	import imgHome from '../assets/musculacao.jpg';
+	import icon from '../assets/icon-muscle.png';
 </script>
 
 <section class="intro" style="background-image: url({imgHome});">
@@ -36,6 +37,15 @@
 
 		.btn {
 			margin-top: 24px;
+		}
+
+		p {
+			font-size: calc(18 / 16 * 1rem);
+		}
+
+		img {
+			display: inline;
+			max-width: 36px;
 		}
 	}
 </style>
