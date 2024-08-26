@@ -1,7 +1,5 @@
 <script lang="ts">
 	import img from '$lib/assets/crossfit.jpg';
-
-	const year = new Date().getFullYear();
 </script>
 
 <footer class="footer">
@@ -18,11 +16,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="credits">
-		<div class="credits__wrapper wrap">
-			<span>&copy; Academia Local, {year}</span>
-		</div>
-	</div>
 </footer>
 
 <style lang="scss">
@@ -30,12 +23,6 @@
 
 	.footer {
 		margin-top: 90px;
-
-		span {
-			display: inline-block;
-			font-size: calc(14 / 16 * 1rem);
-			padding: 24px 0;
-		}
 
 		.footer__wrapper {
 			display: grid;
@@ -71,20 +58,6 @@
 				img {
 					max-width: 100%;
 					border-radius: 16px;
-				}
-			}
-		}
-
-		.credits {
-			margin-top: 60px;
-
-			.credits__wrapper {
-				&::before {
-					content: '';
-					display: block;
-					width: 100%;
-					height: 1px;
-					background-color: colors('subtle');
 				}
 			}
 		}
