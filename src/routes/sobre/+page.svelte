@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Info from '$lib/Info.svelte';
 	import Intro from '$lib/Intro.svelte';
 </script>
 
@@ -10,3 +11,18 @@
 	href="/modalidades"
 	content="Confira algumas das perguntas frequentes."
 />
+
+<section class="faq">
+	<div class="faq__wrapper wrap">
+		<Info
+			question="Quanto custa a mensalidade?"
+			answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolor suscipit delectus enim, sequi repudiandae odio, laudantium ullam, quae pariatur modi molestiae illo iste debitis! Asperiores ab modi quae nam."
+		/>
+	</div>
+</section>
+
+<style lang="scss">
+	.faq {
+		margin-top: 60px;
+	}
+</style>

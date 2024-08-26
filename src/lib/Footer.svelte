@@ -53,11 +53,13 @@
 					position: absolute;
 					inset: 0;
 					background-color: colors('overlay');
+					border-radius: 16px;
 				}
 
 				img {
 					max-width: 100%;
 					border-radius: 16px;
+					object-fit: cover;
 				}
 			}
 		}
