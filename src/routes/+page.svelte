@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Intro from '$lib/Intro.svelte';
 </script>
 
