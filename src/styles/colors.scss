@@ -1,0 +1,10 @@
+
+$colors: (
+  'bg':#121212,
+  'feature': #ff3e00,
+  'white': #fff
+);
+
+@function colors($color-name) {
+  @return map-get($colors, $color-name);
+}
