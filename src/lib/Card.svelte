@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	export let info: Modalidade;
 </script>
 
-<a href="/modalidades/{info.slug}" class="card">
+<a href="{base}/modalidades/{info.slug}" class="card">
 	<img src={info.img} alt={info.name} />
 	<h2>{info.name}</h2>
 </a>

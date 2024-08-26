@@ -1,24 +1,25 @@
 <script lang="ts">
 	import logo from '$lib/assets/logo.png';
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 
 	$: current = $page.route.id;
 </script>
 
 <header class="header">
 	<div class="header__wrapper wrap">
-		<a href="/"> <img src={logo} alt="Logo da academia" /> </a>
+		<a href={base}> <img src={logo} alt="Logo da academia" /> </a>
 		<nav>
 			<ul>
 				<li>
-					<a href="/" class:active={current === '/'}>Home</a>
+					<a href={base} class:active={current === '/'}>Home</a>
 				</li>
 				<li>
-					<a href="/sobre" class:active={current === '/sobre'}>Sobre</a>
+					<a href="{base}/sobre" class:active={current === '/sobre'}>Sobre</a>
 				</li>
 				<li>
 					<a
-						href="/modalidades"
+						href="{base}/modalidades"
 						class:active={current === '/modalidades' || current === '/modalidades/[slug]'}
 						>Modalidades</a
 					>
