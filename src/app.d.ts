@@ -4,4 +4,5 @@ declare interface Modalidade {
 	name: string;
 	slug: string;
 	img: string;
+	content: string;
 }
