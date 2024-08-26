@@ -53,6 +53,8 @@
 </section>
 
 <style lang="scss">
+	@use '../styles/colors.scss' as *;
+
 	.intro {
 		min-height: 360px;
 		background-size: cover;
@@ -66,7 +68,7 @@
 			content: '';
 			position: absolute;
 			inset: 0;
-			background-color: rgb(0, 0, 0, 0.55);
+			background-color: colors('overlay');
 		}
 
 		.intro__wrapper {

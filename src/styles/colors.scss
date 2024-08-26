@@ -3,7 +3,9 @@ $colors: (
   'bg':#121212,
   'feature': #ff3e00,
   'white': #fff,
-  'black':#121212
+  'black':#121212,
+  'overlay': rgba(0,0,0,0.55),
+  'subtle': rgba(255,255,255,0.2)
 );
 
 @function colors($color-name) {
