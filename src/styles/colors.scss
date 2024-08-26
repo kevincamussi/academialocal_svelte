@@ -2,7 +2,8 @@
 $colors: (
   'bg':#121212,
   'feature': #ff3e00,
-  'white': #fff
+  'white': #fff,
+  'black':#121212
 );
 
 @function colors($color-name) {

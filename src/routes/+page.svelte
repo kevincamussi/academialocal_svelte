@@ -9,7 +9,7 @@
 			A academia Local está pronta para te ajudar a chegar mais longe e alcançar sua melhor
 			performance .
 		</p>
-		<a href="/sobre">Sobre</a>
+		<a href="/sobre" class="btn">Sobre</a>
 	</div>
 </section>
 
@@ -23,15 +23,19 @@
 		justify-content: start;
 		position: relative;
 
-		.intro__wrapper {
-			z-index: 1;
-		}
-
 		&::after {
 			content: '';
 			position: absolute;
 			inset: 0;
 			background-color: rgb(0, 0, 0, 0.55);
+		}
+
+		.intro__wrapper {
+			z-index: 1;
+		}
+
+		.btn {
+			margin-top: 24px;
 		}
 	}
 </style>
