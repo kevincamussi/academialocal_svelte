@@ -23,7 +23,10 @@
 		<p>
 			{content}
 		</p>
-		<a {href} class="btn">{btn}</a>
+
+		{#if href && btn}
+			<a {href} class="btn">{btn}</a>
+		{/if}
 	</div>
 </section>
 
@@ -54,6 +57,7 @@
 
 		p {
 			font-size: calc(18 / 16 * 1rem);
+			margin-top: 20px;
 		}
 
 		img {
