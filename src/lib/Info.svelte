@@ -1,4 +1,6 @@
 <script lang="ts">
+	import autoAnimate from '@formkit/auto-animate';
+
 	import IconPlus from './assets/IconPlus.svelte';
 
 	export let question: string;
@@ -11,8 +13,15 @@
 	};
 </script>
 
-<div class="info" role="button" on:click={handleActive} on:keydown={handleActive} tabindex="0">
-	<div class="question">
+<div
+	class="info"
+	role="button"
+	on:click={handleActive}
+	on:keydown={handleActive}
+	tabindex="0"
+	use:autoAnimate
+>
+	<div class="question" class:active>
 		<h3>{question}</h3>
 		<IconPlus />
 	</div>
@@ -39,6 +48,17 @@
 			:global(svg) {
 				margin-left: auto;
 				flex-shrink: 0;
+				transition: 250ms;
+			}
+
+			&.active {
+				border-color: colors('white');
+				transition: 125ms;
+
+				:global(svg) {
+					transform: rotate(45deg);
+					transition: 125ms;
+				}
 			}
 		}
 
