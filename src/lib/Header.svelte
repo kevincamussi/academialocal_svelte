@@ -1,20 +1,27 @@
 <script lang="ts">
 	import logo from '$lib/assets/logo.png';
+	import { page } from '$app/stores';
+
+	$: current = $page.route.id;
 </script>
 
 <header class="header">
 	<div class="header__wrapper wrap">
-		<a href="/"> <img src={logo} alt="Logo da academia" class="logo" /> </a>
+		<a href="/"> <img src={logo} alt="Logo da academia" /> </a>
 		<nav>
 			<ul>
 				<li>
-					<a href="/">Home</a>
+					<a href="/" class:active={current === '/'}>Home</a>
 				</li>
 				<li>
-					<a href="/sobre">Sobre</a>
+					<a href="/sobre" class:active={current === '/sobre'}>Sobre</a>
 				</li>
 				<li>
-					<a href="/modalidades">Modalidades</a>
+					<a
+						href="/modalidades"
+						class:active={current === '/modalidades' || current === '/modalidades/[slug]'}
+						>Modalidades</a
+					>
 				</li>
 				<li>
 					<a href="#contato" class="btn header__btn">Contato</a>
@@ -61,6 +68,12 @@
 
 			&:not(.btn):hover {
 				text-decoration: underline;
+			}
+
+			&.active,
+			&.active:hover {
+				text-decoration: underline;
+				text-decoration-color: colors('feature');
 			}
 		}
 	}
