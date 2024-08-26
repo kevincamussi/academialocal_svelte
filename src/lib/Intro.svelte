@@ -30,6 +30,7 @@
 				break;
 			default:
 				currentIcon = iconMuscle;
+				break;
 		}
 	};
 
@@ -40,7 +41,7 @@
 	<div class="intro__wrapper wrap">
 		<h1>
 			{@html title}
-			<img src={currentIcon} alt="Muscle Icon" />
+			<img src={currentIcon} alt=" Icon" />
 		</h1>
 		<p>
 			{content}

@@ -3,38 +3,48 @@
 
 	export let question: string;
 	export let answer: string;
+
+	export let active: boolean = false;
+
+	const handleActive = (): void => {
+		active = !active;
+	};
 </script>
 
-<h1>Info <IconPlus /></h1>
-
-<div class="info">
+<div class="info" role="button" on:click={handleActive} on:keydown={handleActive} tabindex="0">
 	<div class="question">
 		<h3>{question}</h3>
 		<IconPlus />
 	</div>
-	<div class="answer">
-		<p>{answer}</p>
-	</div>
+	{#if active}
+		<div class="answer">
+			<p>{answer}</p>
+		</div>
+	{/if}
 </div>
 
 <style lang="scss">
 	@use '../styles/colors.scss' as *;
 
 	.info {
+		cursor: pointer;
+
 		.question {
 			display: flex;
 			align-items: center;
 			border: 1px solid colors('subtle');
 			padding: 16px;
+			height: 80px;
 
 			:global(svg) {
 				margin-left: auto;
+				flex-shrink: 0;
 			}
 		}
 
 		.answer {
 			padding: 0 16px;
-			margin-top: 16px;
+			margin: 16px 0;
 			border-left: 1px solid colors('feature');
 		}
 	}
