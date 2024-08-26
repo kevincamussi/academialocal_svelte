@@ -1,51 +1,53 @@
 <script lang="ts">
 	import imgMusculacao from '$lib/assets/musculacao.jpg';
-	import iconMuscle from '$lib/assets/icon-muscle.png';
 	import imgExercicio from '$lib/assets/exercicios.jpg';
+	import imgAlongamento from '$lib/assets/alongamento.jpg';
+	import iconMuscle from '$lib/assets/icon-muscle.png';
 	import iconWeight from '$lib/assets/icon-weight.png';
 
 	export let title: string;
 	export let content: string;
-	export let btn: string;
-	export let href: string;
+	export let btn: string | undefined = undefined;
+	export let href: string | undefined = undefined;
+	export let img: 'exercicio' | 'alongamento' | 'musculacao' = 'musculacao';
+	export let icon: 'weight' | 'muscle' = 'muscle';
 
-	export let img: string;
-	export let currentImage = imgMusculacao;
-	export let icon: string;
-	export let currentIcon = iconMuscle;
+	let currentImage = '';
+	let currentIcon = '';
 
-	export const updateImgAndIcon = () => {
+	const changeImgAndIcon = () => {
 		switch (img) {
+			case 'alongamento':
+				currentImage = imgAlongamento;
+				break;
 			case 'exercicio':
 				currentImage = imgExercicio;
 				break;
-			default:
+			case 'musculacao':
 				currentImage = imgMusculacao;
 				break;
 		}
 
 		switch (icon) {
+			case 'muscle':
+				currentIcon = iconMuscle;
+				break;
 			case 'weight':
 				currentIcon = iconWeight;
-				break;
-			default:
-				currentIcon = iconMuscle;
 				break;
 		}
 	};
 
-	$: updateImgAndIcon();
+	$: changeImgAndIcon();
 </script>
 
 <section class="intro" style="background-image: url({currentImage});">
 	<div class="intro__wrapper wrap">
 		<h1>
 			{@html title}
-			<img src={currentIcon} alt=" Icon" />
+			<img src={currentIcon} alt="Icon" />
 		</h1>
-		<p>
-			{content}
-		</p>
+		<p>{content}</p>
 
 		{#if href && btn}
 			<a {href} class="btn">{btn}</a>
