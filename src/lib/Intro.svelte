@@ -1,24 +1,46 @@
-<script>
+<script lang="ts">
 	import imgMusculacao from '$lib/assets/musculacao.jpg';
 	import iconMuscle from '$lib/assets/icon-muscle.png';
+	import imgExercicio from '$lib/assets/exercicios.jpg';
+	import iconWeight from '$lib/assets/icon-weight.png';
 
-	export let title;
-	export let content;
-	export let btn;
-	export let href;
+	export let title: string;
+	export let content: string;
+	export let btn: string;
+	export let href: string;
 
-	export let img;
-	if (img === 'musculacao') img = imgMusculacao;
+	export let img: string;
+	export let currentImage = imgMusculacao;
+	export let icon: string;
+	export let currentIcon = iconMuscle;
 
-	export let icon;
-	if (icon === 'muscle') icon = iconMuscle;
+	export const updateImgAndIcon = () => {
+		switch (img) {
+			case 'exercicio':
+				currentImage = imgExercicio;
+				break;
+			default:
+				currentImage = imgMusculacao;
+				break;
+		}
+
+		switch (icon) {
+			case 'weight':
+				currentIcon = iconWeight;
+				break;
+			default:
+				currentIcon = iconMuscle;
+		}
+	};
+
+	$: updateImgAndIcon();
 </script>
 
-<section class="intro" style="background-image: url({img});">
+<section class="intro" style="background-image: url({currentImage});">
 	<div class="intro__wrapper wrap">
 		<h1>
 			{@html title}
-			<img src={icon} alt="Muscle Icon" />
+			<img src={currentIcon} alt="Muscle Icon" />
 		</h1>
 		<p>
 			{content}

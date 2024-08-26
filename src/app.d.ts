@@ -2,11 +2,17 @@
 // for information about these interfaces
 declare global {
 	namespace App {
-		// interface Error {}
-		// interface Locals {}
-		// interface PageData {}
-		// interface PageState {}
-		// interface Platform {}
+		interface Props {
+			title: string;
+			content: string;
+			btn?: string; // Propriedade opcional
+			href?: string; // Propriedade opcional
+			img?: string; // Propriedade opcional
+			icon?: string; // Propriedade opcional
+			currentImage?: string; // Propriedade opcional
+			currentIcon?: string; // Propriedade opcional
+			updateImgAndIcon?: () => void; // Função opcional
+		}
 	}
 }
 
