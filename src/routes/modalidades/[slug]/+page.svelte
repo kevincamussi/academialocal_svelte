@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	// import { page } from '$app/stores';
 	import { modalidades } from '$lib/stores';
 	import IntroSingle from '$lib/IntroSingle.svelte';
 	import Card from '$lib/Card.svelte';
 
-	let modalidade = $page.params.slug;
-	let data = $modalidades.find((e) => e.slug === modalidade);
+	// let modalidade = $page.params.slug;
+	export let data;
 </script>
 
 {#if data}

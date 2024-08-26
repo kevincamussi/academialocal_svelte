@@ -6,7 +6,7 @@ import alongamento from '$lib/assets/alongamento.jpg';
 import exercicios from '$lib/assets/exercicios.jpg';
 import natacao from '$lib/assets/natacao.jpg';
 
-export const modalidades = writable<Modalidade[]>([
+export const listaModalidades: Modalidade[] = [
 	{
 		name: 'Musculação',
 		slug: 'musculacao',
@@ -37,4 +37,6 @@ export const modalidades = writable<Modalidade[]>([
 		img: natacao,
 		content: 'Natação individual ou em grupo'
 	}
-]);
+];
+
+export const modalidades = writable(listaModalidades);
