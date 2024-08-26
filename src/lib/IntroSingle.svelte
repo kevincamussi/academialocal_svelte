@@ -55,4 +55,22 @@
 			margin-top: 8px;
 		}
 	}
+
+	@media (max-width: 768px) {
+		.intro {
+			&__wrapper {
+				grid-template-columns: 1fr;
+			}
+
+			&__img {
+				grid-row: 1;
+
+				img {
+					height: 240px;
+					width: 100%;
+					object-position: center;
+				}
+			}
+		}
+	}
 </style>

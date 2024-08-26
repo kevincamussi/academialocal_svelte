@@ -39,4 +39,10 @@
 			gap: 20px;
 		}
 	}
+
+	@media (max-width: 768px) {
+		.faq__wrapper {
+			grid-template-columns: 1fr;
+		}
+	}
 </style>

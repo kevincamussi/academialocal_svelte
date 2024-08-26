@@ -36,4 +36,10 @@
 			padding: 8px 16px;
 		}
 	}
+
+	@media (max-width: 768px) {
+		.card {
+			flex-basis: 100%;
+		}
+	}
 </style>

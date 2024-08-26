@@ -64,4 +64,15 @@
 			}
 		}
 	}
+
+	@media (max-width: 768px) {
+		.header__wrapper {
+			flex-direction: column;
+			justify-content: center;
+
+			nav {
+				margin-left: unset;
+			}
+		}
+	}
 </style>

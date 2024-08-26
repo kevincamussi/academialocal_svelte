@@ -65,4 +65,10 @@
 			}
 		}
 	}
+
+	@media (max-width: 768px) {
+		.footer__wrapper {
+			grid-template-columns: 1fr;
+		}
+	}
 </style>
