@@ -18,3 +18,16 @@
 		{/each}
 	</div>
 </section>
+
+<style lang="scss">
+	.modalidades {
+		margin-top: 60px;
+
+		&__wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			justify-content: center;
+		}
+	}
+</style>

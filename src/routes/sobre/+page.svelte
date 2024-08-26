@@ -32,11 +32,11 @@
 <style lang="scss">
 	.faq {
 		margin-top: 60px;
-	}
 
-	.faq__wrapper {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 20px;
+		&__wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+		}
 	}
 </style>

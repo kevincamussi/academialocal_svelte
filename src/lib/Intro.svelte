@@ -74,7 +74,7 @@
 			background-color: colors('overlay');
 		}
 
-		.intro__wrapper {
+		&__wrapper {
 			z-index: 1;
 		}
 

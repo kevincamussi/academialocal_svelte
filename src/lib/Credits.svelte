@@ -14,7 +14,7 @@
 	.credits {
 		margin-top: 60px;
 
-		.credits__wrapper {
+		&__wrapper {
 			&::before {
 				content: '';
 				display: block;

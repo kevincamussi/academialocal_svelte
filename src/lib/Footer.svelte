@@ -24,7 +24,31 @@
 	.footer {
 		margin-top: 90px;
 
-		.footer__wrapper {
+		&__btns {
+			margin-top: 24px;
+			display: flex;
+			gap: 8px;
+		}
+
+		&__img {
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background-color: colors('overlay');
+				border-radius: 16px;
+			}
+
+			img {
+				max-width: 100%;
+				border-radius: 16px;
+				object-fit: cover;
+			}
+		}
+
+		&__wrapper {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 20px;
@@ -37,30 +61,6 @@
 
 			h2 {
 				font-size: calc(36 / 16 * 1rem);
-			}
-
-			.footer__btns {
-				margin-top: 24px;
-				display: flex;
-				gap: 8px;
-			}
-
-			.footer__img {
-				position: relative;
-
-				&::after {
-					content: '';
-					position: absolute;
-					inset: 0;
-					background-color: colors('overlay');
-					border-radius: 16px;
-				}
-
-				img {
-					max-width: 100%;
-					border-radius: 16px;
-					object-fit: cover;
-				}
 			}
 		}
 	}
