@@ -17,20 +17,29 @@
 
 // export default config;
 
-import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+// import adapter from '@sveltejs/adapter-static';
+// import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-  preprocess: vitePreprocess(),
+// /** @type {import('@sveltejs/kit').Config} */
+// const config = {
+//   preprocess: vitePreprocess(),
+//   kit: {
+//     adapter: adapter({
+//       fallback: 'index.html' // Usado para SPA (Single Page Application)
+//     }),
+//     paths: {
+//       base: process.env.BASE_PATH || '/academialocal_svelte'
+//     }
+//   }
+// };
+
+// export default config;
+
+import adapter from '@sveltejs/adapter-vercel';
+
+export default {
   kit: {
-    adapter: adapter({
-      fallback: 'index.html' // Usado para SPA (Single Page Application)
-    }),
-    paths: {
-      base: process.env.BASE_PATH || '/academialocal_svelte'
-    }
+    adapter: adapter()
   }
 };
 
-export default config;
